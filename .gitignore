@@ -3,3 +3,5 @@ node_modules
 .DS_Store
 database.sqlite
 ./postman
+/src/generated/prisma
+dev.db
