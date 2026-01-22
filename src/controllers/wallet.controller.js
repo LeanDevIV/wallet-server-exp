@@ -1,9 +1,8 @@
-import { getSqliteDb } from "../config/db.js";
+import  db  from "../config/db.js";
 
 // Endpoint para verificar estado y crear usuario de prueba
 export const checkHealth = async (req, res) => {
   try {
-    const db = getSqliteDb();
     
     // Vamos a insertar un usuario "dummy" si no existe para verificar escritura
     // await db.run(

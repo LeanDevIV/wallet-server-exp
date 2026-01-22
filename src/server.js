@@ -4,9 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import morgan from "morgan";
 
-import { connectSqlite } from "./config/db.js";
-
-connectSqlite();
+import  db  from "./config/db.js";
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
@@ -28,7 +26,6 @@ app.get("/", (req, res) => {
 
 async function startServer() {
   try {
-    await connectSqlite();
     app.listen(PORT, () => {
       console.log(`Servidor escuchando en el puerto ${PORT}`);
     });
